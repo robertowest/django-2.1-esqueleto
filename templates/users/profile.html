@@ -1,0 +1,139 @@
+{% extends "layout/default.html" %}
+
+{% block content %}
+    {% if next %}
+    <div class="alert alert-danger" role="alert">
+        <p>NEXT</p>
+    </div>
+    {% endif %}
+
+    <!-- errores -->
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <hr>
+
+    <div class="container bootstrap snippet">
+        <div class="row">
+            <div class="col-sm-10">
+                <h1>{{ user.username }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--left col-->
+                <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="rounded-circle img-thumbnail" alt="avatar">
+                    <button type="button" class="btn btn-primary btn-sm" style="margin-top: 10px;">Cargar foto</button>
+                </div>
+                <hr>
+
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-secondary">Info</li>
+                    <li class="list-group-item d-flex">
+                        <div class="col-4">Alta</div>
+                        <div class="col-8 text-right">{{ user.date_joined|date:"d/m/y" }}</div>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div class="col-4">¿Activo?</div>
+                        <div class="col-8 text-right">{{ user.is_active|yesno:"Sí,No" }}</div>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div class="col-4">¿Empleado?</div>
+                        <div class="col-8 text-right">{{ user.is_staff|yesno:"Sí,No" }}</div>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div class="col-4">¿Administrador?</div>
+                        <div class="col-8 text-right">{{ user.is_superuser|yesno:"Sí,No" }}</div>
+                    </li>
+                </ul>
+            </div>
+            <!--/col-3-->
+            <div class="col-sm-9">
+                <hr>
+                <form class="form" action="##" method="post" id="registrationForm">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="first_name">
+                                <h4>Nombre</h4>
+                            </label>
+                            <input type="text" class="form-control" name="first_name" id="first_name"
+                                   value="{{ user.first_name }}"
+                                   placeholder="Nombre" title="ingrese su nombre.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="last_name">
+                                <h4>Apellido</h4>
+                            </label>
+                            <input type="text" class="form-control" name="last_name" id="last_name"
+                                   value="{{ user.last_name }}"
+                                   placeholder="Apellido" title="ingrese su apellido.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="email">
+                                <h4>Correo electrónico</h4>
+                            </label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                   value="{{ user.email }}"
+                                   placeholder="su@email.com" title="ingrese su e-mail.">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <br>
+                            <button class="btn btn-lg btn-success" type="submit" value="profile">
+                                <i class="glyphicon glyphicon-ok-sign"></i> Grabar
+                            </button>
+                            <input type="hidden" name="next" value="{{ next }}" />
+                            <!--
+                            <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            -->
+                        </div>
+                    </div>
+                </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <script>
+        $(document).ready(function() {
+            var readURL = function(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.avatar').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $(".file-upload").on('change', function(){
+                readURL(this);
+            });
+        });
+    </script>
+{% endblock %}

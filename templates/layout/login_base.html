@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Roberto West">
+        <meta name="description" content="">
+
+        <title>{% block title %}Mi Sitio{% endblock %}</title>
+        {% load static %}
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+    </head>
+    <body class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    {% block message %}
+                    {% endblock %}                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    {% block content %}
+                    {% endblock %}                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

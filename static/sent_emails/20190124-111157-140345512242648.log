@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: =?utf-8?q?Contrase=C3=B1a_restablecida_en_localhost=3A8000?=
+From: webmaster@localhost
+To: roberto.west@gmail.com
+Date: Thu, 24 Jan 2019 14:11:57 -0000
+Message-ID: <154833911739.48.159630938716568779@091c48f782e3>
+
+Someone asked for password reset for email roberto.west@gmail.com. Follow the link below:
+http://localhost:8000/accounts/reset/MQ/539-4bd2b1c72cad4997427b/
+
+-------------------------------------------------------------------------------
