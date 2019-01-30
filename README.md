@@ -49,6 +49,8 @@ $ mkdir templates
 
 ## Ejecutando las pruebas ⚙️
 
+El usuario de la base de datos sqlite es *admin* con contraseña *admin*, igualmente pueden eliminar la base de datos y volver a realizar la miración.
+
 _Estas son las direcciones habilitadas_
 
 http://localhost:8000
