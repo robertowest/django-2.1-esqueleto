@@ -25,7 +25,7 @@
     <form method="post" action="{% url 'login' %}" class="form-signin">
         {% csrf_token %}
 
-        <h1 class="h3 mb-3 font-weight-normal">Por favor, identifiquese</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Por favor, identifíquese</h1>
 
         <!--
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -48,7 +48,9 @@
 
         {# Assumes you setup the password_reset view in your URLconf #}
         <p class="mt-5 mb-3 text-muted">
-            <a href="#">¿Olvidó su contraseña?</a>
+            <a href="{% url 'register' %}">¿Todavía no tienes usuario?</a>
+            <br>
+            <a href="{% url 'reset_password' %}">¿Olvidó su contraseña?</a>
         </p>
     </form>
 {% endblock %}

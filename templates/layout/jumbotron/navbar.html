@@ -30,11 +30,15 @@
         <ul class="navbar-nav">
             {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a href="{% url 'profile'%}" class="btn btn-info">{{ user.username }}</a>
-                    <a href="{% url 'logout'%}" class="btn btn-light" href="">Salir</a>
+                    <a href="{% url 'profile' %}" class="btn btn-info">{{ user.username }}</a>
+                    <a href="{% url 'logout' %}" class="btn btn-light" href="">Salir</a>
+                    <!-- users/password_reset/ -->
                 </li>
             {% else %}
-                <a href="{% url 'login'%}" class="btn btn-light" href="">Iniciar</a>
+                <li class="nav-item">
+                    <a href="{% url 'register' %}" class="btn btn-light" href="">Registrarse</a>
+                    <a href="{% url 'login' %}" class="btn btn-light" href="">Iniciar</a>
+                </li>
             {% endif %}
         </ul>
     </div>
