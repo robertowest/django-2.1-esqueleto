@@ -1,0 +1,42 @@
+{% extends "layout/login_base.html" %}
+
+{% load static %}
+
+{% block message %}
+    <!-- errores -->
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="{% url 'reset_password' %}" class="form-signin">
+        {% csrf_token %}
+
+        <h1 class="h3 mb-3 font-weight-normal">Restablecer contraseña</h1>
+
+        <p style="text-align: left">
+            ¿Ha olvidado su clave?<br>
+            Introduzca su dirección de correo a continuación y le enviaremos por correo electrónico las instrucciones para establecer una nueva.
+        </p>
+
+        <label for="inputEmail" class="sr-only">Correo electrónico</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+
+        <br>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+        <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+{% endblock %}
