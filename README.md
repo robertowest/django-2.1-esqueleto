@@ -1,4 +1,4 @@
-# django-2.1-mysite
+# django-2.1-esqueleto
 
 _Esqueleto inicial para mis proyectos creados en Django 2.1_
 
@@ -66,4 +66,4 @@ http://localhost:8000/reset_password
 
 ## Pendiente por hacer 📌
 
-_Me quedó pendiente la creación de la plantilla para *reset_password* para que tenga el mismo aspecto que el resto_
+_Me quedó pendiente la creación de la plantilla para reset_password para que tenga el mismo aspecto que el resto_
