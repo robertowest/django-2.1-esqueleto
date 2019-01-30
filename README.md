@@ -52,10 +52,15 @@ $ mkdir templates
 _Estas son las direcciones habilitadas_
 
 http://localhost:8000
+
 http://localhost:8000/login
+
 http://localhost:8000/logout
+
 http://localhost:8000/register
+
 http://localhost:8000/profile
+
 http://localhost:8000/reset_password
 
 
