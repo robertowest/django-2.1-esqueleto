@@ -40,16 +40,9 @@ $ mkdir apps
 $ mkdir templates
 ```
 
-![Home Page](pantalla-01.png)
-
-![Login](pantalla-02.png)
-
-![Sign Up](pantalla-03.png)
-
-
 ## Ejecutando las pruebas ⚙️
 
-El usuario de la base de datos sqlite es *admin* con contraseña *admin*, igualmente pueden eliminar la base de datos y volver a realizar la miración.
+_El usuario de la base de datos sqlite es admin con contraseña admin, igualmente pueden eliminar la base de datos y volver a realizar la miración._
 
 _Estas son las direcciones habilitadas_
 
@@ -68,4 +61,10 @@ http://localhost:8000/reset_password
 
 ## Pendiente por hacer 📌
 
-_Me quedó pendiente la creación de la plantilla para reset_password para que tenga el mismo aspecto que el resto_
+_reset_password no funciona desde mi plantilla_
+
+![Home Page](pantalla-01.png)
+
+![Login](pantalla-02.png)
+
+![Sign Up](pantalla-03.png)
