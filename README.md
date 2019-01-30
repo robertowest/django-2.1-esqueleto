@@ -39,3 +39,9 @@ $ django-admin startproject config .
 $ mkdir apps
 $ mkdir templates
 ```
+
+![Home Page](pantalla-01.png)
+
+![Login](pantalla-02.png)
+
+![Sign Up](pantalla-03.png)
