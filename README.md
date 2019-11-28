@@ -1,17 +1,17 @@
-# django-2.1-esqueleto
+# django2-esqueleto
 
-_Esqueleto inicial para mis proyectos creados en Django 2.1_
+Esqueleto inicial para mis proyectos creados en Django 2.x
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
 ### Pre-requisitos 📋
 
-_Este proyeto no tiene requisitos adicionales, solo es necesaria la instalación de [Python 3](https://www.python.org) y [django 2](https://www.djangoproject.com)._
+Este proyeto no tiene requisitos adicionales, solo es necesaria la instalación de [Python 3](https://www.python.org) y [django 2](https://www.djangoproject.com).
 
 _En mi caso tengo el siguiente entorno:_
 
@@ -28,7 +28,7 @@ pip install django
 
 ### Instalación 🔧
 
-_La instalación de este proyecto es muy sencilla, solo tendrás que copiar los archivos en tu directorio de trabajo_
+La instalación de este proyecto es muy sencilla, solo tendrás que copiar los archivos en tu directorio de trabajo
 
 _De todas maneras describiré a continuación los pasos para crear un proyecto con el fin de recordarme a mi mismo como lo hago ..._
 
@@ -42,9 +42,9 @@ $ mkdir templates
 
 ## Ejecutando las pruebas ⚙️
 
-_El usuario de la base de datos sqlite es admin con contraseña admin, igualmente pueden eliminar la base de datos y volver a realizar la miración._
+El usuario de la base de datos sqlite es admin con contraseña admin, igualmente pueden eliminar la base de datos y volver a realizar la miración.
 
-_Estas son las direcciones habilitadas_
+Estas son las direcciones habilitadas
 
 http://localhost:8000
 
